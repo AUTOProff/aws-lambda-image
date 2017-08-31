@@ -1,0 +1,40 @@
+{
+  "bucket": "auction-product-images",
+  "acl": "public-read",
+  "resizes": [
+    {
+      "orientation": true,
+      "size": "120x120^",
+      "gravity": "Center",
+      "crop": "120x120",
+      "suffix": "_thumb",
+      "quality": 75,
+      "template": {
+        "pattern": "originals/*path",
+        "output": "images/*path"
+      }
+    },
+    {
+      "orientation": true,
+      "size": "572x438^",
+      "gravity": "Center",
+      "crop": "572x438",
+      "suffix": "_med",
+      "quality": 75,
+      "template": {
+        "pattern": "originals/*path",
+        "output": "images/*path"
+      }
+    },
+    {
+      "orientation": true,
+      "size": "1500x1500>",
+      "suffix": "_large",
+      "quality": 80,
+      "template": {
+        "pattern": "originals/*path",
+        "output": "images/*path"
+      }
+    }
+  ]
+}
